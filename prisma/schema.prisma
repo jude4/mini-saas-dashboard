@@ -1,13 +1,19 @@
 // Prisma Schema for Mini SaaS Dashboard
 
-// Prisma Schema for Mini SaaS Dashboard
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model for authentication
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
   name      String
   role      Role     @default(USER)
   projects  Project[]
