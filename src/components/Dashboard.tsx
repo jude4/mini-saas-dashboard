@@ -18,6 +18,7 @@ import ProjectTable from './ProjectTable';
 import ProjectModal from './ProjectModal';
 import StatusFilterComponent from './StatusFilter';
 import Sidebar from './Sidebar';
+import DeleteConfirmation from './DeleteConfirmation';
 import { Project, ProjectsResponse } from '@/types';
 
 type StatusFilter = 'ALL' | 'ACTIVE' | 'ON_HOLD' | 'COMPLETED';
@@ -37,6 +38,9 @@ export default function Dashboard() {
   const [pageSize] = useState(10);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
+  const [projectToDelete, setProjectToDelete] = useState<Project | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
+
 
   const showToast = (message: string, type: 'success' | 'error') => {
     setToast({ message, type });
@@ -120,12 +124,20 @@ export default function Dashboard() {
     setIsModalOpen(true);
   };
 
-  const handleDeleteProject = async (id: string) => {
-    if (!confirm('Are you sure you want to delete this project?')) return;
+  const handleDeleteProject = (id: string) => {
+    const project = projects.find(p => p.id === id);
+    if (project) {
+      setProjectToDelete(project);
+    }
+  };
 
+  const confirmDeleteProject = async () => {
+    if (!projectToDelete) return;
+
+    setIsDeleting(true);
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`/api/projects/${id}`, {
+      const response = await fetch(`/api/projects/${projectToDelete.id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -136,14 +148,18 @@ export default function Dashboard() {
       
       if (data.success) {
         showToast('Project deleted successfully', 'success');
+        setProjectToDelete(null);
         fetchProjects();
       } else {
         showToast(data.error || 'Failed to delete project', 'error');
       }
     } catch {
       showToast('Failed to delete project', 'error');
+    } finally {
+      setIsDeleting(false);
     }
   };
+
 
   const handleSaveProject = async (projectData: Partial<Project>) => {
     try {
@@ -411,9 +427,17 @@ export default function Dashboard() {
         <ProjectModal
           project={editingProject}
           onClose={() => setIsModalOpen(false)}
-          onSave={handleSaveProject}
-        />
+        onSave={handleSaveProject}
+      />
       )}
+
+      <DeleteConfirmation
+        isOpen={!!projectToDelete}
+        onClose={() => setProjectToDelete(null)}
+        onConfirm={confirmDeleteProject}
+        title={projectToDelete?.name || ''}
+        isLoading={isDeleting}
+      />
 
       {/* Toast */}
       {toast && (
