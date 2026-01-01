@@ -4,17 +4,17 @@ A modern, full-stack project management dashboard built with **Next.js 14**, **T
 
 ![Dashboard Preview](https://via.placeholder.com/800x450/1e293b/6366f1?text=Mini+SaaS+Dashboard)
 
-## ✨ Features
+##  Features
 
-- **🔐 JWT Authentication** - Secure login and registration
-- **📊 Project Management** - Full CRUD operations for projects
-- **🔍 Search & Filter** - Search by name/team member, filter by status
-- **📱 Responsive Design** - Works on desktop, tablet, and mobile
-- **🌙 Dark Mode** - Beautiful dark theme with glassmorphism effects
-- **⚡ Real-time Updates** - Instant feedback with toast notifications
-- **📄 Pagination** - Optimized data loading with 10 projects per page
+- ** JWT Authentication** - Secure login and registration
+- ** Project Management** - Full CRUD operations for projects
+- ** Search & Filter** - Search by name/team member, filter by status
+- ** Responsive Design** - Works on desktop, tablet, and mobile
+- ** Dark Mode** - Beautiful dark theme with glassmorphism effects
+- ** Real-time Updates** - Instant feedback with toast notifications
+- ** Pagination** - Optimized data loading with 10 projects per page
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|------------|
@@ -27,7 +27,7 @@ A modern, full-stack project management dashboard built with **Next.js 14**, **T
 | Validation | Zod |
 | Icons | Lucide React |
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ├── prisma/
@@ -53,7 +53,7 @@ A modern, full-stack project management dashboard built with **Next.js 14**, **T
 │       └── index.ts       # TypeScript interfaces
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -116,7 +116,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 | User | demo@example.com | password123 |
 | Admin | admin@example.com | password123 |
 
-## 📡 API Endpoints
+##  API Endpoints
 
 ### Authentication
 
@@ -142,7 +142,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - `page` - Page number (default: 1)
 - `limit` - Items per page (default: 10)
 
-## 🎨 UI Features
+##  UI Features
 
 - **Glassmorphism** - Modern glass-like UI effects
 - **Micro-animations** - Smooth transitions and hover effects
@@ -151,7 +151,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - **Responsive Tables** - Horizontal scroll on mobile
 - **Form Validation** - Client-side validation with error messages
 
-## 📦 Available Scripts
+##  Available Scripts
 
 ```bash
 pnpm dev          # Start development server
@@ -165,7 +165,7 @@ pnpm db:seed      # Seed database
 pnpm db:studio    # Open Prisma Studio
 ```
 
-## 🔒 Environment Variables
+##  Environment Variables
 
 | Variable | Description | Default |
 |----------|-------------|---------|
@@ -173,7 +173,7 @@ pnpm db:studio    # Open Prisma Studio
 | `JWT_SECRET` | Secret key for JWT signing | Required |
 | `JWT_EXPIRES_IN` | Token expiration time | `7d` |
 
-## 🧪 Testing the API
+##  Testing the API
 
 Using curl:
 
@@ -193,21 +193,3 @@ curl -X POST http://localhost:3000/api/projects \
   -H "Authorization: Bearer TOKEN" \
   -d '{"name":"New Project","status":"ACTIVE","deadline":"2025-06-30","teamMember":"John Doe","budget":50000}'
 ```
-
-## 📝 Future Improvements
-
-- [ ] Drag-and-drop project reordering
-- [ ] Team member management
-- [ ] Project comments/notes
-- [ ] Export to CSV/Excel
-- [ ] Dark/Light theme toggle
-- [ ] Email notifications
-- [ ] Docker containerization
-
-## 📄 License
-
-MIT License - feel free to use this project for learning or production.
-
----
-
-Built with ❤️ for a technical interview task.
