@@ -61,9 +61,7 @@ export async function POST(request: NextRequest) {
             name: error instanceof Error ? error.name : undefined,
         });
         return errorResponse(
-            process.env.NODE_ENV === 'development'
-                ? `Login failed: ${error instanceof Error ? error.message : 'Unknown error'}`
-                : 'Internal server error',
+            `Login failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
             500
         );
     }
