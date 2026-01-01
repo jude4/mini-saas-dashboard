@@ -50,7 +50,7 @@ export default function Sidebar({ isOpen, onClose, userName, onLogout }: Sidebar
               <div className="p-1.5 rounded-lg bg-primary-600/20">
                 <LayoutDashboard className="w-5 h-5 text-primary-400" />
               </div>
-              <span className="font-bold text-lg text-white tracking-tight">MiniSaaS</span>
+              <span className="font-bold text-lg text-dark-100 tracking-tight">MiniSaaS</span>
             </div>
             <button 
               onClick={onClose}
@@ -69,11 +69,11 @@ export default function Sidebar({ isOpen, onClose, userName, onLogout }: Sidebar
                 className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group ${
                   item.active 
                     ? 'bg-primary-600/10 text-primary-400 border border-primary-600/20' 
-                    : 'text-dark-300 hover:bg-dark-700 hover:text-white'
+                    : 'text-dark-300 hover:bg-dark-700 hover:text-dark-100'
                 }`}
               >
                 <item.icon className={`w-5 h-5 transition-colors ${
-                  item.active ? 'text-primary-400' : 'text-dark-400 group-hover:text-white'
+                  item.active ? 'text-primary-400' : 'text-dark-400 group-hover:text-dark-100'
                 }`} />
                 <span className="font-medium">{item.label}</span>
               </Link>
@@ -88,7 +88,7 @@ export default function Sidebar({ isOpen, onClose, userName, onLogout }: Sidebar
                   {userName.charAt(0).toUpperCase()}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-white truncate">{userName}</p>
+                  <p className="text-sm font-semibold text-dark-100 truncate">{userName}</p>
                   <p className="text-xs text-dark-400 truncate">Pro Plan</p>
                 </div>
               </div>

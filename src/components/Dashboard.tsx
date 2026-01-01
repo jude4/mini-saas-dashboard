@@ -231,7 +231,7 @@ export default function Dashboard() {
                     <LayoutDashboard className="w-6 h-6 text-primary-400" />
                   </div>
                   <div>
-                    <h1 className="text-lg font-bold text-white">Dashboard</h1>
+                    <h1 className="text-lg font-bold text-dark-100">Dashboard</h1>
                     <p className="text-xs text-dark-400 hidden sm:block">Welcome back, {userName}</p>
                   </div>
                 </div>
@@ -239,7 +239,7 @@ export default function Dashboard() {
               
               <div className="flex items-center gap-3">
                 <div className="hidden sm:flex flex-col items-end">
-                  <span className="text-sm font-medium text-white">{userName}</span>
+                  <span className="text-sm font-medium text-dark-100">{userName}</span>
                   <span className="text-[10px] text-primary-400 font-bold uppercase tracking-wider">Administrator</span>
                 </div>
                 <div className="w-10 h-10 rounded-xl bg-dark-800 border border-dark-700 flex items-center justify-center text-primary-400 font-bold">
@@ -274,7 +274,7 @@ export default function Dashboard() {
                     <FolderKanban className="w-5 h-5 text-primary-400" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-white">{stats.total}</p>
+                    <p className="text-2xl font-bold text-dark-100">{stats.total}</p>
                     <p className="text-sm text-dark-400">Total</p>
                   </div>
                 </div>
@@ -285,7 +285,7 @@ export default function Dashboard() {
                     <div className="w-5 h-5 rounded-full bg-green-500"></div>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-white">{stats.active}</p>
+                    <p className="text-2xl font-bold text-dark-100">{stats.active}</p>
                     <p className="text-sm text-dark-400">Active</p>
                   </div>
                 </div>
@@ -296,7 +296,7 @@ export default function Dashboard() {
                     <div className="w-5 h-5 rounded-full bg-yellow-500"></div>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-white">{stats.onHold}</p>
+                    <p className="text-2xl font-bold text-dark-100">{stats.onHold}</p>
                     <p className="text-sm text-dark-400">On Hold</p>
                   </div>
                 </div>
@@ -307,7 +307,7 @@ export default function Dashboard() {
                     <div className="w-5 h-5 rounded-full bg-blue-500"></div>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-white">{stats.completed}</p>
+                    <p className="text-2xl font-bold text-dark-100">{stats.completed}</p>
                     <p className="text-sm text-dark-400">Completed</p>
                   </div>
                 </div>
@@ -367,13 +367,13 @@ export default function Dashboard() {
         {!isLoading && totalPages > 1 && (
           <div className="mt-8 flex items-center justify-between">
             <p className="text-sm text-dark-400">
-              Showing <span className="text-white font-medium">{(currentPage - 1) * pageSize + 1}</span> to <span className="text-white font-medium">{Math.min(currentPage * pageSize, totalProjects)}</span> of <span className="text-white font-medium">{totalProjects}</span> projects
+              Showing <span className="text-dark-100 font-medium">{(currentPage - 1) * pageSize + 1}</span> to <span className="text-dark-100 font-medium">{Math.min(currentPage * pageSize, totalProjects)}</span> of <span className="text-dark-100 font-medium">{totalProjects}</span> projects
             </p>
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
                 disabled={currentPage === 1}
-                className="p-2 rounded-lg bg-dark-800 border border-dark-600 text-dark-300 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="p-2 rounded-lg bg-dark-800 border border-dark-600 text-dark-300 hover:text-dark-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -394,7 +394,7 @@ export default function Dashboard() {
                         className={`w-10 h-10 rounded-lg text-sm font-medium transition-all duration-200 ${
                           currentPage === pageNum
                             ? 'bg-primary-600 text-white shadow-lg shadow-primary-600/20'
-                            : 'bg-dark-800 text-dark-400 hover:text-white border border-dark-600'
+                            : 'bg-dark-800 text-dark-400 hover:text-dark-100 border border-dark-600'
                         }`}
                       >
                         {pageNum}
@@ -412,7 +412,7 @@ export default function Dashboard() {
               <button
                 onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
                 disabled={currentPage === totalPages}
-                className="p-2 rounded-lg bg-dark-800 border border-dark-600 text-dark-300 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="p-2 rounded-lg bg-dark-800 border border-dark-600 text-dark-300 hover:text-dark-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>

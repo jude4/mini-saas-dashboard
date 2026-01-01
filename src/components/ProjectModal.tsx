@@ -81,7 +81,7 @@ export default function ProjectModal({ project, onClose, onSave }: ProjectModalP
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-dark-700 bg-dark-800/50 backdrop-blur-md sticky top-0 z-10">
           <div>
-            <h2 className="text-xl font-bold text-white leading-tight">
+            <h2 className="text-xl font-bold text-dark-100 leading-tight">
               {isEditing ? 'Edit Project' : 'New Project'}
             </h2>
             <p className="text-xs text-dark-400 mt-0.5">

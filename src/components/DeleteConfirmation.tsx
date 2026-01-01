@@ -30,16 +30,16 @@ export default function DeleteConfirmation({
           <div className="mx-auto w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6">
             <AlertTriangle className="w-8 h-8 text-red-500" />
           </div>
-          <h3 className="text-xl font-bold text-white mb-3">Delete Project?</h3>
+          <h3 className="text-xl font-bold text-dark-100 mb-3">Delete Project?</h3>
           <p className="text-dark-300 leading-relaxed mb-8">
-            Are you sure you want to delete <span className="text-white font-semibold">"{title}"</span>? 
+            Are you sure you want to delete <span className="text-dark-100 font-semibold">"{title}"</span>? 
             This action cannot be undone and all data associated with this project will be permanently removed.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <button
               onClick={onClose}
               disabled={isLoading}
-              className="flex-1 px-6 py-3 rounded-xl bg-dark-700 hover:bg-dark-600 text-white font-semibold transition-all duration-200 disabled:opacity-50"
+              className="flex-1 px-6 py-3 rounded-xl bg-dark-700 hover:bg-dark-600 text-dark-100 font-semibold transition-all duration-200 disabled:opacity-50"
             >
               Cancel
             </button>
