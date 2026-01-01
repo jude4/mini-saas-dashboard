@@ -340,7 +340,7 @@ export default function Dashboard() {
           <div className="flex gap-2">
             <button
               onClick={() => fetchProjects()}
-              className="btn btn-secondary btn-md"
+              className="btn btn-secondary btn-md text-dark-100"
               title="Refresh"
             >
               <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />

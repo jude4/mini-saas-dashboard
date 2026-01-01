@@ -2,9 +2,6 @@
 
 import { 
   FolderKanban, 
-  BarChart3, 
-  Users, 
-  Settings, 
   LogOut, 
   X,
   LayoutDashboard
@@ -21,9 +18,6 @@ interface SidebarProps {
 const navItems = [
   { icon: LayoutDashboard, label: 'Dashboard', href: '#', active: true },
   { icon: FolderKanban, label: 'Projects', href: '#' },
-  { icon: BarChart3, label: 'Analytics', href: '#' },
-  { icon: Users, label: 'Team', href: '#' },
-  { icon: Settings, label: 'Settings', href: '#' },
 ];
 
 export default function Sidebar({ isOpen, onClose, userName, onLogout }: SidebarProps) {
@@ -68,12 +62,12 @@ export default function Sidebar({ isOpen, onClose, userName, onLogout }: Sidebar
                 href={item.href}
                 className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group ${
                   item.active 
-                    ? 'bg-primary-600/10 text-primary-400 border border-primary-600/20' 
+                    ? 'bg-primary-600/10 text-dark-100 border border-primary-600/20' 
                     : 'text-dark-300 hover:bg-dark-700 hover:text-dark-100'
                 }`}
               >
                 <item.icon className={`w-5 h-5 transition-colors ${
-                  item.active ? 'text-primary-400' : 'text-dark-400 group-hover:text-dark-100'
+                  item.active ? 'text-dark-100' : 'text-dark-400 group-hover:text-dark-100'
                 }`} />
                 <span className="font-medium">{item.label}</span>
               </Link>

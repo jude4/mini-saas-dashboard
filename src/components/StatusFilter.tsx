@@ -46,7 +46,7 @@ export default function StatusFilter({ value, onChange }: StatusFilterProps) {
           ) : (
             <div className={`w-2 h-2 rounded-full ${selectedOption.color.replace('text-', 'bg-')}`} />
           )}
-          <span className="text-sm font-medium text-white">{selectedOption.label}</span>
+          <span className="text-sm font-medium text-dark-100">{selectedOption.label}</span>
         </div>
         <ChevronDown 
           className={`w-4 h-4 text-dark-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
@@ -65,7 +65,7 @@ export default function StatusFilter({ value, onChange }: StatusFilterProps) {
               }}
               className={`
                 w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors
-                ${value === option.value ? 'bg-dark-700 text-white' : 'text-dark-300 hover:bg-dark-700 hover:text-white'}
+                ${value === option.value ? 'bg-dark-700 text-white' : 'text-dark-300 hover:bg-dark-700 hover:text-dark-100'}
               `}
             >
               <div className="flex items-center gap-3">
