@@ -72,7 +72,7 @@ body {
 }
 
 .btn-secondary {
-  @apply bg-dark-700 hover:bg-dark-600 text-white focus:ring-dark-500;
+  @apply bg-dark-700 hover:bg-dark-600 text-dark-100 focus:ring-dark-500;
 }
 
 .btn-danger {
@@ -139,15 +139,15 @@ body {
 }
 
 .badge-active {
-  @apply bg-green-500/20 text-green-400 border border-green-500/30;
+  @apply bg-green-500/20 text-green-700 border border-green-500/30;
 }
 
 .badge-on-hold {
-  @apply bg-yellow-500/20 text-yellow-400 border border-yellow-500/30;
+  @apply bg-yellow-500/20 text-yellow-700 border border-yellow-500/30;
 }
 
 .badge-completed {
-  @apply bg-blue-500/20 text-blue-400 border border-blue-500/30;
+  @apply bg-blue-500/20 text-blue-700 border border-blue-500/30;
 }
 
 /* Table styles */
