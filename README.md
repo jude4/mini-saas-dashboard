@@ -2,21 +2,19 @@
 
 A modern, full-stack project management dashboard built with **Next.js 14**, **Tailwind CSS**, **PostgreSQL**, and **Prisma**.
 
-![Dashboard Preview](https://via.placeholder.com/800x450/1e293b/6366f1?text=Mini+SaaS+Dashboard)
-
-## 🚀 Live Demo
+##  Live Demo
 [https://mini-saas-dashboard-kk74.vercel.app/](https://mini-saas-dashboard-kk74.vercel.app/)
 
 
 ##  Features
 
-- ** JWT Authentication** - Secure login and registration
-- ** Project Management** - Full CRUD operations for projects
-- ** Search & Filter** - Search by name/team member, filter by status
-- ** Responsive Design** - Works on desktop, tablet, and mobile
-- ** Dark Mode** - Beautiful dark theme with glassmorphism effects
-- ** Real-time Updates** - Instant feedback with toast notifications
-- ** Pagination** - Optimized data loading with 10 projects per page
+-  JWT Authentication** - Secure login and registration
+-  Project Management** - Full CRUD operations for projects
+-  Search & Filter** - Search by name/team member, filter by status
+-  Responsive Design** - Works on desktop, tablet, and mobile
+-  Dark Mode** - Beautiful dark theme with glassmorphism effects
+-  Real-time Updates** - Instant feedback with toast notifications
+-  Pagination** - Optimized data loading with 10 projects per page
 
 ##  Tech Stack
 
@@ -112,13 +110,6 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Demo Credentials
-
-| Role | Email | Password |
-|------|-------|----------|
-| User | demo@example.com | password123 |
-| Admin | admin@example.com | password123 |
 
 ##  API Endpoints
 
