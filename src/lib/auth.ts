@@ -12,7 +12,6 @@ function getJWTSecret(): string {
   return secret;
 }
 
-const JWT_SECRET = getJWTSecret();
 const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '7d';
 
 export interface JWTPayload {
@@ -23,13 +22,15 @@ export interface JWTPayload {
 
 // Generate JWT token
 export function generateToken(payload: JWTPayload): string {
-  return jwt.sign(payload, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN } as any);
+  const secret = getJWTSecret();
+  return jwt.sign(payload, secret, { expiresIn: JWT_EXPIRES_IN } as any);
 }
 
 // Verify JWT token
 export function verifyToken(token: string): JWTPayload | null {
   try {
-    return jwt.verify(token, JWT_SECRET) as JWTPayload;
+    const secret = getJWTSecret();
+    return jwt.verify(token, secret) as JWTPayload;
   } catch {
     return null;
   }
