@@ -9,8 +9,6 @@ import {
 } from '@/lib/auth';
 import { Prisma } from '@prisma/client';
 
-export const dynamic = 'force-dynamic';
-
 // GET /api/projects - List all projects with filtering and search
 export async function GET(request: NextRequest) {
     try {
