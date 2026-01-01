@@ -57,7 +57,7 @@ export default function LoginPage() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary-600/20 mb-4">
             <LogIn className="w-8 h-8 text-primary-400" />
           </div>
-          <h1 className="text-2xl font-bold text-white mb-2">Welcome Back</h1>
+          <h1 className="text-2xl font-bold text-dark-100 mb-2">Welcome Back</h1>
           <p className="text-dark-400">Sign in to your dashboard</p>
         </div>
 

@@ -235,7 +235,7 @@ export default function Dashboard() {
                   </div>
                   <div>
                     <h1 className="text-lg font-bold text-dark-100">Dashboard</h1>
-                    <p className="text-xs text-dark-100 hidden sm:block">Welcome back, {userName}</p>
+                    <p className="text-xs text-dark-50 hidden sm:block">Welcome back, {userName}</p>
                   </div>
                 </div>
               </div>
