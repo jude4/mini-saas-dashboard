@@ -1,7 +1,6 @@
 'use client';
 
 import { 
-  FolderKanban, 
   LogOut, 
   X,
   LayoutDashboard
@@ -17,7 +16,6 @@ interface SidebarProps {
 
 const navItems = [
   { icon: LayoutDashboard, label: 'Dashboard', href: '#', active: true },
-  { icon: FolderKanban, label: 'Projects', href: '#' },
 ];
 
 export default function Sidebar({ isOpen, onClose, userName, onLogout }: SidebarProps) {
