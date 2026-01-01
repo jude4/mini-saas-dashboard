@@ -4,6 +4,10 @@ A modern, full-stack project management dashboard built with **Next.js 14**, **T
 
 ![Dashboard Preview](https://via.placeholder.com/800x450/1e293b/6366f1?text=Mini+SaaS+Dashboard)
 
+## 🚀 Live Demo
+[https://mini-saas-dashboard-kk74.vercel.app/](https://mini-saas-dashboard-kk74.vercel.app/)
+
+
 ##  Features
 
 - ** JWT Authentication** - Secure login and registration
