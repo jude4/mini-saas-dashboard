@@ -140,29 +140,16 @@ export default function ProjectModal({ project, onClose, onSave }: ProjectModalP
                   Project Status
                   <span className="text-primary-500">*</span>
                 </label>
-                <div className="grid grid-cols-3 gap-3">
-                  {[
-                    { id: 'ACTIVE', label: 'Active', icon: Activity, color: 'text-green-400', bg: 'bg-green-500/10', border: 'border-green-500/20', activeBg: 'bg-green-500', shadow: 'shadow-green-500/30' },
-                    { id: 'ON_HOLD', label: 'On Hold', icon: Clock, color: 'text-yellow-400', bg: 'bg-yellow-500/10', border: 'border-yellow-500/20', activeBg: 'bg-yellow-500', shadow: 'shadow-yellow-500/30' },
-                    { id: 'COMPLETED', label: 'Done', icon: CheckCircle2, color: 'text-blue-400', bg: 'bg-blue-500/10', border: 'border-blue-500/20', activeBg: 'bg-blue-500', shadow: 'shadow-blue-500/30' },
-                  ].map((item) => (
-                    <button
-                      key={item.id}
-                      type="button"
-                      onClick={() => setStatus(item.id as any)}
-                      className={`flex flex-col items-center justify-center p-3 rounded-xl border transition-all duration-300 gap-2.5 relative group ${
-                        status === item.id 
-                          ? `${item.activeBg} text-white border-transparent shadow-lg ${item.shadow} scale-[1.02]` 
-                          : `${item.bg} ${item.color} ${item.border} hover:border-dark-500 hover:bg-dark-700/50`
-                      }`}
-                    >
-                      <item.icon className={`w-5 h-5 transition-transform duration-300 ${status === item.id ? 'scale-110' : 'group-hover:scale-110'}`} />
-                      <span className="text-[10px] font-bold uppercase tracking-wider">{item.label}</span>
-                      {status === item.id && (
-                        <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-white rounded-full" />
-                      )}
-                    </button>
-                  ))}
+                <div className="relative">
+                  <select
+                    value={status}
+                    onChange={(e) => setStatus(e.target.value as any)}
+                    className="select text-dark-100"
+                  >
+                    <option value="ACTIVE">Active</option>
+                    <option value="ON_HOLD">On Hold</option>
+                    <option value="COMPLETED">Done</option>
+                  </select>
                 </div>
               </div>
 

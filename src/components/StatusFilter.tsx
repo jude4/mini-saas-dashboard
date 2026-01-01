@@ -65,7 +65,7 @@ export default function StatusFilter({ value, onChange }: StatusFilterProps) {
               }}
               className={`
                 w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors
-                ${value === option.value ? 'bg-dark-700 text-white' : 'text-dark-300 hover:bg-dark-700 hover:text-dark-100'}
+                ${value === option.value ? 'bg-dark-700 text-dark-100' : 'text-dark-300 hover:bg-dark-700 hover:text-dark-100'}
               `}
             >
               <div className="flex items-center gap-3">
