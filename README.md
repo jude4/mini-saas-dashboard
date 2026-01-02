@@ -12,7 +12,6 @@ A modern, full-stack project management dashboard built with **Next.js 14**, **T
 -  Project Management** - Full CRUD operations for projects
 -  Search & Filter** - Search by name/team member, filter by status
 -  Responsive Design** - Works on desktop, tablet, and mobile
--  Dark Mode** - Beautiful dark theme with glassmorphism effects
 -  Real-time Updates** - Instant feedback with toast notifications
 -  Pagination** - Optimized data loading with 10 projects per page
 
